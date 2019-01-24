@@ -10,10 +10,12 @@ import XCTest
 @testable import KataLoginLogout
 
 class LoginPresenterTests: XCTestCase {
-    var sut: LoginPresenter!
+    private var sut: LoginPresenter!
+    private var dateProvider: MockDateProvider!
     
     override func setUp() {
-        sut = LoginPresenter()
+        dateProvider = MockDateProvider()
+        sut = LoginPresenter(dateProvider: dateProvider)
     }
 
     override func tearDown() {
@@ -36,12 +38,16 @@ class LoginPresenterTests: XCTestCase {
     }
     
     func testWhenDateIsOddThenTheLogoutIsPerformed() {
-        let result = sut.logout(at: Date.init(timeIntervalSince1970: 122342344))
+        dateProvider.time = 111112
+        
+        let result = sut.logout()
         XCTAssertTrue(result.success)
     }
     
     func testWhenDateIsEvenThenTheLogoutIsKO() {
-        let result = sut.logout(at: Date.init(timeIntervalSince1970: 122342343))
+        dateProvider.time = 111113
+        
+        let result = sut.logout()
         XCTAssertFalse(result.success)
     }
 }

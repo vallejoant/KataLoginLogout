@@ -30,27 +30,6 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController {
-    @IBAction func accessAction(_ sender: Any) {
-        let loginResult = login(with: userTextField.text, password: passTextField.text)
-        
-        if loginResult.success {
-            showMain()
-        } else {
-            showMessage("KO", message: loginResult.errorMessage)
-        }
-    }
-    
-    @IBAction func logoutAction(_ sender: Any) {
-        let logoutResult = logout()
-        
-        if logoutResult.success {
-            showLogin()
-        }
-    }
-    
-}
-
-extension LoginViewController {
     private func showMain() {
         loginView.isHidden = true
         mainView.isHidden = false
@@ -60,7 +39,7 @@ extension LoginViewController {
         loginView.isHidden = false
         mainView.isHidden = true
     }
-
+    
     private func showMessage(_ title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
@@ -70,24 +49,24 @@ extension LoginViewController {
 }
 
 extension LoginViewController {
-    func login(with username: String?, password: String?) -> Result {
-        if let username = username, let password = password {
-            if username == "admin" && password == "admin" {
-                return Result(success: true)
-            }
-        }
+    @IBAction func accessAction(_ sender: Any) {
+        let loginResult = presenter.login(with: userTextField.text, password: passTextField.text)
         
-        return Result(success: false, error: "Login not valid")
+        if loginResult.success {
+            showMain()
+        } else {
+            showMessage("KO", message: loginResult.errorMessage)
+        }
     }
     
-    func logout() -> Result {
-        let timeInterval = Date().timeIntervalSince1970
-        let miliseconds = Int(timeInterval)
+    @IBAction func logoutAction(_ sender: Any) {
+        let logoutResult = presenter.logout(at: Date())
         
-        if miliseconds % 2 == 0 {
-            return Result(success: true)
+        if logoutResult.success {
+            showLogin()
         } else {
-            return Result(success: false)
+            showMessage("KO", message: logoutResult.errorMessage)
         }
     }
+    
 }

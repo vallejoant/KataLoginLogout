@@ -11,43 +11,49 @@ import XCTest
 
 class LoginPresenterTests: XCTestCase {
     private var sut: LoginPresenter!
-    private var dateProvider: MockDateProvider!
+    
+    private var logic: MockLoginModel!
+    private var view: MockLoginViewController!
     
     override func setUp() {
-        dateProvider = MockDateProvider()
-        sut = LoginPresenter(dateProvider: dateProvider)
+        logic = MockLoginModel()
+        sut = LoginPresenter(logic: logic)
+        
+        view = MockLoginViewController()
+        sut.attachView(view: view)
     }
 
     override func tearDown() {
 
     }
+    
+    func testWhenPressingLoginButtonWithOKResultThenMainAppear() {
+        logic.loginOK = true
+        
+        sut.performAccess(with: "", password: "")
+        XCTAssertTrue(view.mainAppear)
+    }
+    
+    func testWhenPressingLoginButtonWithOKResultThenAMessageAppear() {
+        logic.loginOK = false
+        
+        sut.performAccess(with: "", password: "")
+        XCTAssertTrue(view.messageAppear)
+    }
+    
+    func testWhenPressingLogoutButtonWithOKResultThenMainAppear() {
+        logic.logoutOK = true
+        
+        sut.performLogout()
+        XCTAssertTrue(view.loginAppear)
+    }
+    
+    func testWhenPressingLogoutButtonWithOKResultThenAMessageAppear() {
+        logic.logoutOK = false
+        
+        sut.performLogout()
+        XCTAssertTrue(view.messageAppear)
+    }
 
-    func testWhenReceiveValidCredentialsThenTheLoginIsOK() {
-        let result = sut.login(with: "admin", password: "admin")
-        XCTAssertTrue(result.success)
-    }
     
-    func testWhenReceiveNoCredentialsThenTheLoginIsKO() {
-        let result = sut.login(with: nil, password: nil)
-        XCTAssertFalse(result.success)
-    }
-    
-    func testWhenReceiveInvalidCredentialsThenTheLoginIsKO() {
-        let result = sut.login(with: "asds", password: "zdfz")
-        XCTAssertFalse(result.success)
-    }
-    
-    func testWhenDateIsOddThenTheLogoutIsPerformed() {
-        dateProvider.time = 111112
-        
-        let result = sut.logout()
-        XCTAssertTrue(result.success)
-    }
-    
-    func testWhenDateIsEvenThenTheLogoutIsKO() {
-        dateProvider.time = 111113
-        
-        let result = sut.logout()
-        XCTAssertFalse(result.success)
-    }
 }

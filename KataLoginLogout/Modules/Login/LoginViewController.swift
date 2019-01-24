@@ -15,12 +15,10 @@ protocol LoginView {
 }
 
 class LoginViewController: UIViewController, LoginView {
-
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var accessButton: UIButton!
-    
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var logoutButton: UIButton!
     
@@ -32,6 +30,7 @@ class LoginViewController: UIViewController, LoginView {
         self.title = "Kata Login Logout"
         
         presenter.attachView(view: self)
+        
         showLogin()
     }
 }
@@ -57,23 +56,10 @@ extension LoginViewController {
 
 extension LoginViewController {
     @IBAction func accessAction(_ sender: Any) {
-        let loginResult = presenter.login(with: userTextField.text, password: passTextField.text)
-        
-        if loginResult.success {
-            showMain()
-        } else {
-            showMessage("KO", message: loginResult.errorMessage)
-        }
+        presenter.performAccess(with: userTextField.text, password: passTextField.text)
     }
     
     @IBAction func logoutAction(_ sender: Any) {
-        let logoutResult = presenter.logout()
-        
-        if logoutResult.success {
-            showLogin()
-        } else {
-            showMessage("KO", message: logoutResult.errorMessage)
-        }
+        presenter.performLogout()
     }
-    
 }

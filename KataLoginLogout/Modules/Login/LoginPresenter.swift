@@ -10,37 +10,39 @@ import UIKit
 
 protocol LoginPresenting {
     func attachView(view: LoginView)
-    func login(with username: String?, password: String?) -> Result
-    func logout() -> Result
+    func performAccess(with username: String?, password: String?)
+    func performLogout()
 }
 
 class LoginPresenter: LoginPresenting {
     private var view : LoginView?
-    private var dateProvider : DateProviding!
+    private var logic : LoginModeling!
     
-    public init(dateProvider: DateProviding = DateProvider()){
-        self.dateProvider = dateProvider
+    public init(logic: LoginModeling = LoginModel()){
+        self.logic = logic
     }
     
     func attachView(view: LoginView) {
         self.view = view
     }
     
-    func login(with username: String?, password: String?) -> Result {
-        if let username = username, let password = password {
-            if username == "admin" && password == "admin" {
-                return Result(success: true)
-            }
-        }
+    func performAccess(with username: String?, password: String?) {
+        let loginResult = logic.login(with: username, password: password)
         
-        return Result(success: false, error: "Login not valid")
+        if loginResult.success {
+            view?.showMain()
+        } else {
+            view?.showMessage("KO", message: loginResult.errorMessage)
+        }
     }
     
-    func logout() -> Result {
-        if dateProvider.currentTimeInSeconds() % 2 == 0 {
-            return Result(success: true)
+    func performLogout() {
+        let logoutResult = logic.logout()
+        
+        if logoutResult.success {
+            view?.showLogin()
         } else {
-            return Result(success: false, error: "Logout fail")
+            view?.showMessage("KO", message: logoutResult.errorMessage)
         }
     }
 }

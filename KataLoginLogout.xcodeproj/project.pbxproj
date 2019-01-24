@@ -16,8 +16,12 @@
 		AE03B82D21FA1DBD001C4202 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8388AD21FA0BA900D96D0C /* LoginViewController.swift */; };
 		AE03B83021FA1EE8001C4202 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B82F21FA1EE8001C4202 /* DateProvider.swift */; };
 		AE03B83121FA1EE8001C4202 /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B82F21FA1EE8001C4202 /* DateProvider.swift */; };
-		AE03B83421FA2016001C4202 /* MockDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B83321FA2016001C4202 /* MockDateProvider.swift */; };
 		AE03B83521FA2016001C4202 /* MockDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B83321FA2016001C4202 /* MockDateProvider.swift */; };
+		AE03B83721FA248C001C4202 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B83621FA248C001C4202 /* LoginModel.swift */; };
+		AE03B83821FA248C001C4202 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B83621FA248C001C4202 /* LoginModel.swift */; };
+		AE03B83A21FA2622001C4202 /* LoginLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B83921FA2622001C4202 /* LoginLogicTests.swift */; };
+		AE03B83D21FA26E0001C4202 /* MockLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B83B21FA26E0001C4202 /* MockLoginViewController.swift */; };
+		AE03B84021FA2844001C4202 /* MockLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B83E21FA2844001C4202 /* MockLoginModel.swift */; };
 		AE83888C21FA084700D96D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83888B21FA084700D96D0C /* AppDelegate.swift */; };
 		AE83888E21FA084700D96D0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83888D21FA084700D96D0C /* ViewController.swift */; };
 		AE83889121FA084700D96D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83888F21FA084700D96D0C /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 		AE03B82921FA1AD0001C4202 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		AE03B82F21FA1EE8001C4202 /* DateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProvider.swift; sourceTree = "<group>"; };
 		AE03B83321FA2016001C4202 /* MockDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDateProvider.swift; sourceTree = "<group>"; };
+		AE03B83621FA248C001C4202 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		AE03B83921FA2622001C4202 /* LoginLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLogicTests.swift; sourceTree = "<group>"; };
+		AE03B83B21FA26E0001C4202 /* MockLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginViewController.swift; sourceTree = "<group>"; };
+		AE03B83E21FA2844001C4202 /* MockLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginModel.swift; sourceTree = "<group>"; };
 		AE83888821FA084700D96D0C /* KataLoginLogout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KataLoginLogout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE83888B21FA084700D96D0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE83888D21FA084700D96D0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				AE03B83321FA2016001C4202 /* MockDateProvider.swift */,
+				AE03B83B21FA26E0001C4202 /* MockLoginViewController.swift */,
+				AE03B83E21FA2844001C4202 /* MockLoginModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -164,6 +174,7 @@
 				AE8388A021FA084800D96D0C /* KataLoginLogoutTests.swift */,
 				AE8388A221FA084800D96D0C /* Info.plist */,
 				AE03B82921FA1AD0001C4202 /* LoginPresenterTests.swift */,
+				AE03B83921FA2622001C4202 /* LoginLogicTests.swift */,
 			);
 			path = KataLoginLogoutTests;
 			sourceTree = "<group>";
@@ -181,6 +192,7 @@
 			children = (
 				AE8388AD21FA0BA900D96D0C /* LoginViewController.swift */,
 				AE03B82421FA0FC0001C4202 /* LoginPresenter.swift */,
+				AE03B83621FA248C001C4202 /* LoginModel.swift */,
 				AE8388AE21FA0BA900D96D0C /* LoginViewController.xib */,
 			);
 			path = Login;
@@ -339,9 +351,9 @@
 			files = (
 				AE03B82521FA0FC0001C4202 /* LoginPresenter.swift in Sources */,
 				AE03B82721FA1154001C4202 /* Result.swift in Sources */,
+				AE03B83721FA248C001C4202 /* LoginModel.swift in Sources */,
 				AE8388AF21FA0BA900D96D0C /* LoginViewController.swift in Sources */,
 				AE83888E21FA084700D96D0C /* ViewController.swift in Sources */,
-				AE03B83421FA2016001C4202 /* MockDateProvider.swift in Sources */,
 				AE03B83021FA1EE8001C4202 /* DateProvider.swift in Sources */,
 				AE83888C21FA084700D96D0C /* AppDelegate.swift in Sources */,
 			);
@@ -353,11 +365,15 @@
 			files = (
 				AE03B82B21FA1AD9001C4202 /* LoginPresenter.swift in Sources */,
 				AE03B82A21FA1AD0001C4202 /* LoginPresenterTests.swift in Sources */,
+				AE03B83D21FA26E0001C4202 /* MockLoginViewController.swift in Sources */,
+				AE03B83821FA248C001C4202 /* LoginModel.swift in Sources */,
 				AE03B82C21FA1B5E001C4202 /* Result.swift in Sources */,
 				AE03B82D21FA1DBD001C4202 /* LoginViewController.swift in Sources */,
 				AE03B83521FA2016001C4202 /* MockDateProvider.swift in Sources */,
 				AE03B83121FA1EE8001C4202 /* DateProvider.swift in Sources */,
+				AE03B84021FA2844001C4202 /* MockLoginModel.swift in Sources */,
 				AE8388A121FA084800D96D0C /* KataLoginLogoutTests.swift in Sources */,
+				AE03B83A21FA2622001C4202 /* LoginLogicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

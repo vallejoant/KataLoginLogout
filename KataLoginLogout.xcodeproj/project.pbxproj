@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA84A10203C24D22DAA1A384 /* Pods_KataLoginLogout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE04712D020AB8BA9B585C8A /* Pods_KataLoginLogout.framework */; };
 		AE83888C21FA084700D96D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83888B21FA084700D96D0C /* AppDelegate.swift */; };
 		AE83888E21FA084700D96D0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83888D21FA084700D96D0C /* ViewController.swift */; };
 		AE83889121FA084700D96D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83888F21FA084700D96D0C /* Main.storyboard */; };
 		AE83889321FA084800D96D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE83889221FA084800D96D0C /* Assets.xcassets */; };
 		AE83889621FA084800D96D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83889421FA084800D96D0C /* LaunchScreen.storyboard */; };
 		AE8388A121FA084800D96D0C /* KataLoginLogoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8388A021FA084800D96D0C /* KataLoginLogoutTests.swift */; };
+		AE8388AF21FA0BA900D96D0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8388AD21FA0BA900D96D0C /* LoginViewController.swift */; };
+		AE8388B021FA0BA900D96D0C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE8388AE21FA0BA900D96D0C /* LoginViewController.xib */; };
+		C4EAD620500C6774088120BF /* Pods_KataLoginLogoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E123CB5681897E1701A587FA /* Pods_KataLoginLogoutTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27E5AB6D29E470D1A9E1EED3 /* Pods-KataLoginLogoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataLoginLogoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataLoginLogoutTests/Pods-KataLoginLogoutTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9438C998F58C472785E6F472 /* Pods-KataLoginLogout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataLoginLogout.release.xcconfig"; path = "Pods/Target Support Files/Pods-KataLoginLogout/Pods-KataLoginLogout.release.xcconfig"; sourceTree = "<group>"; };
 		AE83888821FA084700D96D0C /* KataLoginLogout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KataLoginLogout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE83888B21FA084700D96D0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE83888D21FA084700D96D0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +42,12 @@
 		AE83889C21FA084800D96D0C /* KataLoginLogoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KataLoginLogoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8388A021FA084800D96D0C /* KataLoginLogoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KataLoginLogoutTests.swift; sourceTree = "<group>"; };
 		AE8388A221FA084800D96D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8388AD21FA0BA900D96D0C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AE8388AE21FA0BA900D96D0C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C930983FBA1D74E8345E7C9B /* Pods-KataLoginLogoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataLoginLogoutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KataLoginLogoutTests/Pods-KataLoginLogoutTests.release.xcconfig"; sourceTree = "<group>"; };
+		DBA98E838F025C2036383DEB /* Pods-KataLoginLogout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataLoginLogout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataLoginLogout/Pods-KataLoginLogout.debug.xcconfig"; sourceTree = "<group>"; };
+		DE04712D020AB8BA9B585C8A /* Pods_KataLoginLogout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataLoginLogout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E123CB5681897E1701A587FA /* Pods_KataLoginLogoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KataLoginLogoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA84A10203C24D22DAA1A384 /* Pods_KataLoginLogout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +63,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EAD620500C6774088120BF /* Pods_KataLoginLogoutTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A6865C9413D8CCBBCEB943A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBA98E838F025C2036383DEB /* Pods-KataLoginLogout.debug.xcconfig */,
+				9438C998F58C472785E6F472 /* Pods-KataLoginLogout.release.xcconfig */,
+				27E5AB6D29E470D1A9E1EED3 /* Pods-KataLoginLogoutTests.debug.xcconfig */,
+				C930983FBA1D74E8345E7C9B /* Pods-KataLoginLogoutTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A0DB84CA23DC70DFD5AC5BE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE04712D020AB8BA9B585C8A /* Pods_KataLoginLogout.framework */,
+				E123CB5681897E1701A587FA /* Pods_KataLoginLogoutTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AE83887F21FA084700D96D0C = {
 			isa = PBXGroup;
 			children = (
 				AE83888A21FA084700D96D0C /* KataLoginLogout */,
 				AE83889F21FA084800D96D0C /* KataLoginLogoutTests */,
 				AE83888921FA084700D96D0C /* Products */,
+				4A6865C9413D8CCBBCEB943A /* Pods */,
+				A0DB84CA23DC70DFD5AC5BE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +113,7 @@
 		AE83888A21FA084700D96D0C /* KataLoginLogout */ = {
 			isa = PBXGroup;
 			children = (
+				AE8388AB21FA0B8100D96D0C /* Modules */,
 				AE83888B21FA084700D96D0C /* AppDelegate.swift */,
 				AE83888D21FA084700D96D0C /* ViewController.swift */,
 				AE83888F21FA084700D96D0C /* Main.storyboard */,
@@ -96,6 +133,23 @@
 			path = KataLoginLogoutTests;
 			sourceTree = "<group>";
 		};
+		AE8388AB21FA0B8100D96D0C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AE8388AC21FA0B9400D96D0C /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AE8388AC21FA0B9400D96D0C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AE8388AD21FA0BA900D96D0C /* LoginViewController.swift */,
+				AE8388AE21FA0BA900D96D0C /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +157,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE8388A521FA084800D96D0C /* Build configuration list for PBXNativeTarget "KataLoginLogout" */;
 			buildPhases = (
+				B8B5B7A7CCF55ED4C3196B7C /* [CP] Check Pods Manifest.lock */,
 				AE83888421FA084700D96D0C /* Sources */,
 				AE83888521FA084700D96D0C /* Frameworks */,
 				AE83888621FA084700D96D0C /* Resources */,
@@ -120,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE8388A821FA084800D96D0C /* Build configuration list for PBXNativeTarget "KataLoginLogoutTests" */;
 			buildPhases = (
+				F533A38E9C22401391A00A2A /* [CP] Check Pods Manifest.lock */,
 				AE83889821FA084800D96D0C /* Sources */,
 				AE83889921FA084800D96D0C /* Frameworks */,
 				AE83889A21FA084800D96D0C /* Resources */,
@@ -177,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8388B021FA0BA900D96D0C /* LoginViewController.xib in Resources */,
 				AE83889621FA084800D96D0C /* LaunchScreen.storyboard in Resources */,
 				AE83889321FA084800D96D0C /* Assets.xcassets in Resources */,
 				AE83889121FA084700D96D0C /* Main.storyboard in Resources */,
@@ -192,11 +249,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B8B5B7A7CCF55ED4C3196B7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KataLoginLogout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F533A38E9C22401391A00A2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KataLoginLogoutTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AE83888421FA084700D96D0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE8388AF21FA0BA900D96D0C /* LoginViewController.swift in Sources */,
 				AE83888E21FA084700D96D0C /* ViewController.swift in Sources */,
 				AE83888C21FA084700D96D0C /* AppDelegate.swift in Sources */,
 			);
@@ -358,6 +463,7 @@
 		};
 		AE8388A621FA084800D96D0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBA98E838F025C2036383DEB /* Pods-KataLoginLogout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +482,7 @@
 		};
 		AE8388A721FA084800D96D0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9438C998F58C472785E6F472 /* Pods-KataLoginLogout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +501,7 @@
 		};
 		AE8388A921FA084800D96D0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E5AB6D29E470D1A9E1EED3 /* Pods-KataLoginLogoutTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +523,7 @@
 		};
 		AE8388AA21FA084800D96D0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C930983FBA1D74E8345E7C9B /* Pods-KataLoginLogoutTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

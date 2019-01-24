@@ -22,31 +22,61 @@ class LoginLogicTests: XCTestCase {
     }
     
     func testWhenReceiveValidCredentialsThenTheLoginIsOK() {
-        let result = sut.login(with: "admin", password: "admin")
-        XCTAssertTrue(result.success)
+        let expectation = XCTestExpectation(description: "Login perfomed")
+        
+        sut.login(with: "admin", password: "admin") { result in
+            XCTAssertTrue(result.success)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
     }
     
     func testWhenReceiveNoCredentialsThenTheLoginIsKO() {
-        let result = sut.login(with: nil, password: nil)
-        XCTAssertFalse(result.success)
+        let expectation = XCTestExpectation(description: "Login perfomed")
+        
+        sut.login(with: nil, password: nil) { result in
+            XCTAssertFalse(result.success)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
     }
     
     func testWhenReceiveInvalidCredentialsThenTheLoginIsKO() {
-        let result = sut.login(with: "asds", password: "zdfz")
-        XCTAssertFalse(result.success)
+        let expectation = XCTestExpectation(description: "Login perfomed")
+        
+        sut.login(with: "asds", password: "zdfz") { result in
+            XCTAssertFalse(result.success)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
     }
     
     func testWhenDateIsOddThenTheLogoutIsPerformed() {
+        let expectation = XCTestExpectation(description: "Logut perfomed")
+        
         dateProvider.time = 111112
         
-        let result = sut.logout()
-        XCTAssertTrue(result.success)
+        sut.logout() { result in
+            XCTAssertTrue(result.success)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
     }
     
     func testWhenDateIsEvenThenTheLogoutIsKO() {
+        let expectation = XCTestExpectation(description: "Logut perfomed")
+        
         dateProvider.time = 111113
         
-        let result = sut.logout()
-        XCTAssertFalse(result.success)
+        sut.logout() { result in
+            XCTAssertFalse(result.success)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 1.0)
     }
 }

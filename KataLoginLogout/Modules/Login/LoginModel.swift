@@ -9,8 +9,8 @@
 import UIKit
 
 protocol LoginModeling {
-    func login(with username: String?, password: String?) -> Result
-    func logout() -> Result
+    func login(with username: String?, password: String?, completionHandler: (_ result: Result) -> Void)
+    func logout(completionHandler: (_ result: Result) -> Void)
 }
 
 class LoginModel: LoginModeling {
@@ -20,21 +20,22 @@ class LoginModel: LoginModeling {
         self.dateProvider = dateProvider
     }
 
-    func login(with username: String?, password: String?) -> Result {
+    func login(with username: String?, password: String?, completionHandler: (_ result: Result) -> Void) {
         if let username = username, let password = password {
             if username == "admin" && password == "admin" {
-                return Result(success: true)
+                completionHandler(Result(success: true))
+                return
             }
         }
         
-        return Result(success: false, error: "Login not valid")
+        completionHandler(Result(success: false, error: "Login not valid"))
     }
     
-    func logout() -> Result {
+    func logout(completionHandler: (_ result: Result) -> Void) {
         if dateProvider.currentTimeInSeconds() % 2 == 0 {
-            return Result(success: true)
+            completionHandler(Result(success: true))
         } else {
-            return Result(success: false, error: "Logout fail")
+            completionHandler(Result(success: false, error: "Logout fail"))
         }
     }
 }

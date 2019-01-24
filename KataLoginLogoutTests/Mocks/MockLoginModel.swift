@@ -11,12 +11,12 @@ import UIKit
 class MockLoginModel: LoginModeling {
     var loginOK: Bool = true
     var logoutOK: Bool = true
-
-    func login(with username: String?, password: String?) -> Result {
-        return Result(success: loginOK)
+    
+    func login(with username: String?, password: String?, completionHandler: (_ result: Result) -> Void) {
+        completionHandler(Result(success: loginOK))
     }
     
-    func logout() -> Result {
-        return Result(success: logoutOK)
+    func logout(completionHandler: (_ result: Result) -> Void) {
+        completionHandler(Result(success: logoutOK))
     }
 }

@@ -27,22 +27,22 @@ class LoginPresenter: LoginPresenting {
     }
     
     func performAccess(with username: String?, password: String?) {
-        let loginResult = logic.login(with: username, password: password)
-        
-        if loginResult.success {
-            view?.showMain()
-        } else {
-            view?.showMessage("KO", message: loginResult.errorMessage)
+        logic.login(with: username, password: password) { result in
+            if result.success {
+                view?.showMain()
+            } else {
+                view?.showMessage("KO", message: result.errorMessage)
+            }
         }
     }
     
     func performLogout() {
-        let logoutResult = logic.logout()
-        
-        if logoutResult.success {
-            view?.showLogin()
-        } else {
-            view?.showMessage("KO", message: logoutResult.errorMessage)
+        logic.logout() { result in
+            if result.success {
+                view?.showLogin()
+            } else {
+                view?.showMessage("KO", message: result.errorMessage)
+            }
         }
     }
 }

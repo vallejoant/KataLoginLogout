@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA84A10203C24D22DAA1A384 /* Pods_KataLoginLogout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE04712D020AB8BA9B585C8A /* Pods_KataLoginLogout.framework */; };
+		AE03B82521FA0FC0001C4202 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B82421FA0FC0001C4202 /* LoginPresenter.swift */; };
+		AE03B82721FA1154001C4202 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE03B82621FA1154001C4202 /* Result.swift */; };
 		AE83888C21FA084700D96D0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83888B21FA084700D96D0C /* AppDelegate.swift */; };
 		AE83888E21FA084700D96D0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE83888D21FA084700D96D0C /* ViewController.swift */; };
 		AE83889121FA084700D96D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE83888F21FA084700D96D0C /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		27E5AB6D29E470D1A9E1EED3 /* Pods-KataLoginLogoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataLoginLogoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KataLoginLogoutTests/Pods-KataLoginLogoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9438C998F58C472785E6F472 /* Pods-KataLoginLogout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KataLoginLogout.release.xcconfig"; path = "Pods/Target Support Files/Pods-KataLoginLogout/Pods-KataLoginLogout.release.xcconfig"; sourceTree = "<group>"; };
+		AE03B82421FA0FC0001C4202 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		AE03B82621FA1154001C4202 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		AE83888821FA084700D96D0C /* KataLoginLogout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KataLoginLogout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE83888B21FA084700D96D0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE83888D21FA084700D96D0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				AE8388AB21FA0B8100D96D0C /* Modules */,
+				AE03B82621FA1154001C4202 /* Result.swift */,
 				AE83888B21FA084700D96D0C /* AppDelegate.swift */,
 				AE83888D21FA084700D96D0C /* ViewController.swift */,
 				AE83888F21FA084700D96D0C /* Main.storyboard */,
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				AE8388AD21FA0BA900D96D0C /* LoginViewController.swift */,
+				AE03B82421FA0FC0001C4202 /* LoginPresenter.swift */,
 				AE8388AE21FA0BA900D96D0C /* LoginViewController.xib */,
 			);
 			path = Login;
@@ -301,6 +307,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE03B82521FA0FC0001C4202 /* LoginPresenter.swift in Sources */,
+				AE03B82721FA1154001C4202 /* Result.swift in Sources */,
 				AE8388AF21FA0BA900D96D0C /* LoginViewController.swift in Sources */,
 				AE83888E21FA084700D96D0C /* ViewController.swift in Sources */,
 				AE83888C21FA084700D96D0C /* AppDelegate.swift in Sources */,

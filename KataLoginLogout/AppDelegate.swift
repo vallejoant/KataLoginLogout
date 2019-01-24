@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let viewController = LoginViewController()
+        let presenter = LoginPresenter()
+        viewController.presenter = presenter
         
         let navigationController = UINavigationController.init(rootViewController: viewController)
         self.window?.rootViewController = navigationController
